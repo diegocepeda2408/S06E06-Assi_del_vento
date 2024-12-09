@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'JetBrains Mono Variable';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100 800;
+	src: url(@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2)
+		format('woff2-variations');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+		U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@layer base {
+	html {
+		font-family: 'JetBrains Mono Variable', monospace;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply text-balance;
+	}
+
+	p {
+		@apply text-pretty;
+	}
+}
+
+@layer components {
+	.btn {
+		@apply block bg-blue-500 text-white font-semibold text-center rounded-lg px-4 py-2;
+	}
+	.input-form {
+		@apply border border-blue-200 py-3 px-4 rounded-lg w-full focus:border-blue-500 focus:outline-none;
+	}
+	.error-validation {
+		@apply text-red-500 text-xs font-semibold;
+	}
+	.menu {
+		@apply fixed left-0 z-20 w-full p-5 bg-white pt-12 rounded-b-lg shadow-md transition-[top] ease-linear duration-300 md:static md:z-0 md:w-auto md:p-0 md:pt-0 md:rounded-none md:shadow-none;
+	}
+	.nav-link {
+		@apply font-semibold hover:text-blue-500 transition-colors;
+	}
+	.modal {
+		@apply fixed top-0 z-30 left-0 w-full h-screen grid place-content-center;
+	}
+}
+
+@layer utilities {
+}

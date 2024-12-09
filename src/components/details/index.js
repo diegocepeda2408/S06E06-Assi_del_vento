@@ -1,0 +1,5 @@
+export { Reservation } from './Reservation'
+export { Gallery } from './Gallery'
+export { Map } from './Map'
+export { Description } from './Description'
+export { Hero } from './Hero'
